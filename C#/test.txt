@@ -1,0 +1,3 @@
+stuid:50
+stuname:Dnyanada
+marks:90

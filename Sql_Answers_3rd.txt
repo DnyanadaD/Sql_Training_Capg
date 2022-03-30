@@ -178,8 +178,12 @@ Show last name, first name, address and number of nights. Order by last name the
 
 9.How busy are we? For each day of the week beginning 2016-11-25 show the number of bookings starting that day. Be sure to show all the days of the week in the correct order.
 
+SELECT booking.booking_date, COUNT(*) AS arrivals
+FROM booking
+WHERE booking.booking_date BETWEEN '2016-11-25' AND '2016-12-1'
+GROUP BY booking.booking_date;
 +------------+----------+
-| i          | arrivals |
+|Booking_date| arrivals |
 +------------+----------+
 | 2016-11-25 |        7 |
 | 2016-11-26 |        8 |
