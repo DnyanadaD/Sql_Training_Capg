@@ -156,6 +156,15 @@ AND guest.last_name = 'Cadbury';
 
 7.Including Extras. Calculate the total bill for booking 5346 including extras.
 
+
+SELECT (rate.amount + SUM(extra.amount)) AS amount
+FROM booking JOIN rate ON booking.room_type_requested = rate.room_type AND booking.occupants = rate.occupancy
+JOIN extra ON booking.booking_id = extra.booking_id
+WHERE booking.booking_id = 5346;
+
+
+
+
 +-------------+
 | SUM(amount) |
 +-------------+

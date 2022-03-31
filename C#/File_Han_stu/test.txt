@@ -1,0 +1,3 @@
+studid:50
+studname:Dnyanada
+marks:90
